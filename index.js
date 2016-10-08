@@ -14,9 +14,9 @@ function MysqlStore(options) {
     this.user = options.user || 'root';
     this.password = options.password || 'password';
     this.database = options.database || 'migrations';
-    this.migrationsTable = 'migrations';
+    this.migrationsTable = options.migrationsTable || 'migrations';
 
-    // Initialize the migrations table (this is async)
+    // Initialize the migrations migrationsTable (this is async)
     this.init(function(err) {
         if (err) throw err;
     });
@@ -28,7 +28,8 @@ MysqlStore.cliHandler = {
         '     --port <number>  Mysql server port',
         '     --user <string>  Mysql user',
         '     --password <string>  Mysql password',
-        '     --database <string>  Mysql database in which to save migration executions'
+        '     --database <string>  Mysql database in which to save migration executions',
+        '     --migrationsTable <string>  Mysql table in which to save migration executions'
     ],
     parseArg: function(arg) {
         switch (arg) {
@@ -42,6 +43,8 @@ MysqlStore.cliHandler = {
                 return 'password';
             case '--database':
                 return 'database';
+            case '--migrationsTable':
+                return 'migrationsTable';
         }
     }
 };
