@@ -1,0 +1,4 @@
+[submodule "node-migrate"]
+	path = node-migrate
+	url = https://github.com/sloops77/node-migrate
+	branch = features/db-state
