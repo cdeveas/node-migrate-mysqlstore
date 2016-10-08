@@ -1,0 +1,27 @@
+{
+  "name": "migrate-mysqlstore",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "version": "0.0.1",
+  "description": "Node-migrate adapter that uses mysql to track migrations. Install node-migrate and this adapter.",
+  "keywords": [
+    "migrate",
+    "migrations",
+    "node-migrate",
+    "mysql"
+  ],
+  "author": "Chas DeVeas <chasdeveas@gmail.com>",
+  "repository": "git://github.com/cdeveas/node-migrate-mysqlstore",
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "migrate": "latest"
+  },
+  "engines": {
+    "node": ">= 0.4.x"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.11.1"
+  }
+}
