@@ -4,7 +4,7 @@
 var join = require('path').join;
 
 var getStoreUnderTest = function(base) {
-  return {Store: require('..'), args: [{database: 'accounts'}]}
+  return {Store: require('..'), args: [{user: 'root', password: 'password', database: 'migrations-test-db'}]}
 };
 
 var BASIC_BASE = join(__dirname, '..', 'node-migrate', 'test', 'common', 'fixtures', 'basic');
