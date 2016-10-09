@@ -13,7 +13,7 @@ function MysqlStore (options) {
   this.port = options.port || 3306
   this.user = options.user || 'root'
   this.password = options.password || 'password'
-  this.database = options.database || 'migrations'
+  this.database = options.database || 'mysql'
   this.migrationsTable = options.migrationsTable || 'migrations'
 
   // Initialize the migrations migrationsTable (this is async)
