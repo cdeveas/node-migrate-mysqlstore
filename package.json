@@ -14,8 +14,12 @@
   "author": "Chas DeVeas <chasdeveas@gmail.com>",
   "repository": "git://github.com/cdeveas/node-migrate-mysqlstore",
   "devDependencies": {
-    "mocha": "^2.2.1",
-    "migrate": "latest"
+    "eslint": "^3.7.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "migrate": "latest",
+    "mocha": "^2.2.1"
   },
   "engines": {
     "node": ">= 0.4.x"

@@ -1,0 +1,15 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "environment": {
+    "node": true
+  },
+  "extends": ["standard"],
+  "rules": {
+    "no-multi-str": 0
+  }
+}
