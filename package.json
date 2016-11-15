@@ -3,7 +3,7 @@
   "scripts": {
     "test": "mocha test"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node-migrate adapter that uses mysql to track migrations. Install node-migrate and this adapter.",
   "keywords": [
     "migrate",
