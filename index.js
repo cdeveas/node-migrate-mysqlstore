@@ -15,11 +15,6 @@ function MysqlStore (options) {
   this.password = options.password || 'password'
   this.database = options.database || 'mysql'
   this.migrationsTable = options.migrationsTable || 'migrations'
-
-  // Initialize the migrations migrationsTable (this is async)
-  this.init(function (err) {
-    if (err) throw err
-  })
 }
 
 MysqlStore.cliHandler = {
@@ -51,6 +46,8 @@ MysqlStore.cliHandler = {
 
 MysqlStore.prototype._getConnection = function (callback) {
   var connection
+  var err = null
+
   try {
     connection = mysql.createConnection({
       host: this.host,
@@ -60,10 +57,10 @@ MysqlStore.prototype._getConnection = function (callback) {
       password: this.password
     })
   } catch (e) {
-    callback(e)
+    err = e
   }
 
-  callback(null, connection)
+  callback(err, connection)
 }
 
 MysqlStore.prototype.load = function (callback) {
